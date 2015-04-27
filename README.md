@@ -13,3 +13,13 @@ run grunt to install the javascript dependencies
 running grunt will add the dependecies in the index.html
 
 The optimized, minified version is generated and stored in the build directory. This can be copied in to the target folder
+
+The barebones projects has the following configures
+
+* Logback
+* mongo
+* Joda time
+* Apache Commons
+* Spring
+* Jersey
+
