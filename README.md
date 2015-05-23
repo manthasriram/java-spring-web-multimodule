@@ -23,3 +23,5 @@ The barebones projects has the following configures
 * Spring
 * Jersey
 
+
+http://www.radcortez.com/javascript-package-management-npm-bower-grunt/
