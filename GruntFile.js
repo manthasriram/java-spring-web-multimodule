@@ -18,7 +18,7 @@ module.exports = function (grunt) {
             config: {
                 path: {
                     webapp: {
-                        root: 'src/main/webapp'
+                        root: 'saas-web/src/main/webapp'
                     },
                     temp: {
                         root: 'temp'

@@ -1,16 +1,19 @@
 {
-    "name": "javaee7-angular",
-    "version": "1.0.0",
-    "authors": [
-        "Sriram Mantha"
-    ],
-    "description": "javaee7-angular JavaScript dependencies.",
-    "private": true,
-    "dependencies": {
-        "angular": "1.2.0",
-        "jquery": "1.9.1",
-        "angular-bootstrap": "0.10.0",
-        "angular-grid": "2.0.7",
-        "angular-route": "~1.2.0"
-    }
+  "name": "javaee7-angular",
+  "version": "1.0.0",
+  "authors": [
+    "Sriram Mantha"
+  ],
+  "description": "javaee7-angular JavaScript dependencies.",
+  "private": true,
+  "dependencies": {
+    "angular": "1.2.0",
+    "jquery": "1.9.1",
+    "angular-bootstrap": "0.10.0",
+    "angular-grid": "2.0.7",
+    "angular-route": "~1.2.0"
+  },
+  "resolutions": {
+    "angular": ">=1"
+  }
 }

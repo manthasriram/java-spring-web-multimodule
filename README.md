@@ -25,3 +25,9 @@ The barebones projects has the following configures
 
 
 http://www.radcortez.com/javascript-package-management-npm-bower-grunt/
+
+
+Installation
+
+1. npm install
+2. npm install -g grunt-cli
