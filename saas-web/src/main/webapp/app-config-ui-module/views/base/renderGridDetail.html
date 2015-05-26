@@ -1,0 +1,33 @@
+<div ng-controller="masterDetailGridController">
+
+<div class='row header'>
+	<div class='col-sm-12'>
+		<h4 class='pull-left'>
+			<span>{{pageTitle}}</span>
+		</h4>
+		<div class='pull-right'>
+			<!-- Build the bread crumbs for the UI-->
+			<ul class='breadcrumb'>
+				<li ng-repeat="breadcrumb in breadcrumbs">
+					<li><a href="{{breadcrumb.url}}">{{breadcrumb.title}}</i>
+					<li class='separator'>//</li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+<div class='box' style='margin-bottom: 1;'>
+	<div class='box-header blue-background'>
+		<div class='title'>{{pageTitle}}</div>
+	</div>
+	<div class='row'>
+		<gridfilter filterId="{{page-filter}}"></gridfilter>
+	</div>
+	<div class='row'>
+		<div class='col-sm-12'>
+			<masterdetail source="masterDetailObj"> </masterdetail>
+		</div>
+	</div>
+</div>
+
+</div>

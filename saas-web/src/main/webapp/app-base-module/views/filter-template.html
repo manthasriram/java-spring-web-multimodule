@@ -1,0 +1,64 @@
+
+<div class="col-sm-12">
+	<div class="panel panel-primary panel-filter panel-default">
+		<div class="panel-body panel-filter-body">
+			<a class="btn btn-primary btn-sm" data-toggle="modal" ng-click='newFilter()' href="#filterDialog"> Quick Filter <i
+				class="icon-filter" /></i></a> <a class="btn btn-primary btn-sm" ng-click="clearFilter()"> <em> Clear Filter </em> <i class="icon-remove-circle" /></i></a>
+			<em>Saved Filters: </em>
+			<button type="button" class="btn btn-default" ng-click='applyFilterWithMap(f.filterMap)' ng-repeat="f in savedfilters">{{f.filterName}}</button>
+			<!-- <div class="btn-group">
+				<a class="btn btn-primary btn-sm dropdown-toggle" data-toggle="dropdown"> <em>More Filters</em> <span
+					class="caret"></span>
+				</a>
+				<ul class="dropdown-menu pull-right">
+					<li><a href="#">Filter 1</a></li>
+					<li><a href="#">Filter 2</a></li>
+					<li><a href="#">Filter 3</a></li>
+					<li><a href="#">Filter 4</a></li>
+					<li><a href="#">Filter 5</a></li>
+				</ul>
+			</div> -->
+		</div>
+	</div>
+
+	<div class="modal fade" id="filterDialog" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					<h4 class="modal-title">Quick Filter</h4>
+				</div>
+				<div class="modal-body">
+					<div id='manage_filters' ng-show="isManageFilter">
+						<div class="col-sm-12">
+							<div class="form-group">
+								<label class="select">Saved Filters</label> <select id='saved_filter_select' class="form-control"
+									ng-model='selectedSavedFilter' ng-change="fetchSavedFilter()">
+									<option ng-repeat="f in savedfilters" value='{{f.id}}'>{{f.filterName}}</option>
+								</select>
+							</div>
+						</div>
+						<hr/>
+					</div>
+					
+					<div ng-show="showFilterDetails" class="col-sm-12">
+						<form class="form" id="filter_form">
+							<!-- Filter contents are dynamically added here -->
+						</form>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default btn-xs" data-dismiss="modal">Close</button>
+					<button type="button" ng-show='!isManageFilter' class="btn btn-xs" ng-click='manageFilters()'>Manage Saved Filters</button>
+					<button type="button" ng-show='isManageFilter' ng-click='deleteSavedFilter()' class="btn btn-xs">Delete Filter</button>
+					<button type="button" ng-show='isManageFilter' ng-click='newFilter()' class="btn btn-primary btn-xs">New Filter</button>
+					<button type="button" class="btn btn-primary btn-xs" ng-click="applyFilter()">Apply Filter</button>
+					<button type="button" class="btn btn-primary btn-xs" ng-click='saveFilter()'>Save and Apply</button>
+				</div>
+			</div>
+			<!-- /.modal-content -->
+		</div>
+		<!-- /.modal-dialog -->
+	</div>
+	<!-- /.modal -->
+</div>

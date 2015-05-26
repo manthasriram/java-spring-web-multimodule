@@ -1,0 +1,48 @@
+<div class='row header'>
+    <div class='col-sm-12'>
+        <h4 class='pull-left'>
+            <span>UI Configuration</span>
+        </h4>
+        <div class='pull-right'>
+            <ul class='breadcrumb'>
+                <li><a href='index.html'>UI</i>
+                </a></li>
+                <li class='separator'>//</li>
+                <li class='active'>UI Page Definitions</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class='box' style='margin-bottom: 1;'>
+    <div class='box-header blue-background'>
+        <div class='title'>New UI Page Config</div>
+    </div>
+    <div class="box-content">
+        <div class='container'>
+            <div class="well container">
+
+                <editableinput placeholder="Name" label="Page Name"
+                               model="name" />
+                <editableinput placeholder="Description" label="Description"
+                               model="description" />
+
+
+            </div>
+            <div class="well container">
+                <selectformfield label="Hibernate Entity" id="hibernate_entity"
+                                 selectedval="hibernateEntity" options="hibernateEntities" />
+            </div>
+            <div class="well container">
+                <selectformfield label="Tenant" id="tenant_id"
+                                 selectedval="tenant" options="tenants" />
+            </div>
+            <div class="well container">
+                <selectformfield label="Menu" id="menu_id"
+                                 selectedval="menuid" options="menus" />
+            </div>
+
+        </div>
+    </div>
+
+</div>

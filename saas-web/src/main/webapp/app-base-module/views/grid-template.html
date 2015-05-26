@@ -1,0 +1,32 @@
+<div>
+	<div class='responsive-table'>
+		<div class='scrollable-area'>
+			<table class='table grid  table-striped table-condensed'>
+				<thead>
+				</thead>
+				<tbody>
+				</tbody>
+			</table>
+		</div>
+		<div class='row col-lg-12 grid'>
+			<div class='col-lg-6 pull-left'>
+				<div>Showing {{displayCount}} records of {{totalRecords}}</div>
+			</div>
+			<div class='col-lg-6 form form-inline'>
+				<div class='pull-right'>
+					Page <input class='input-xs' size='1' value="{{page}}" /> of {{totalPages}}
+					<div class="btn-group">
+						<button class="btn btn-sm" ng-click="navigate('start')">Start</button>
+						<button class="btn btn-sm" ng-click="navigate('prev')"><< Prev</button>
+						<button class="btn btn-sm" ng-click="navigate('next')">Next >></button>
+						<button class="btn btn-sm" ng-click="navigate('end')">End</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="btn-group  pull-left ">
+		<button class='btn' id='delete_grid_item' ng-click="deleteSelected()">Delete</button>
+	</div>
+	
+</div>

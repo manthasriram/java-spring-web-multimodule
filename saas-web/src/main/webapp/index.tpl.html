@@ -1,0 +1,55 @@
+<head>
+<title>javaee7-angular</title>
+
+<link rel="stylesheet"
+	href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+
+<!-- build:css css/third-party.css -->
+<!-- bower:css -->
+<!-- endbower -->
+<!-- endbuild -->
+
+<!-- build:css css/application.css -->
+<!-- endbuild -->
+
+<!-- build:js lib/third-party.js -->
+<!-- bower:js -->
+<!-- endbower -->
+<!-- endbuild -->
+
+<!-- build:js script/all.js -->
+<!-- endbuild -->
+
+
+<!-- include: "type": "css","files": "assets/stylesheets/*.css" -->
+
+<!-- include: "type": "js", "files": ["app-*/**/*.js"] -->
+
+<script src="app.js"></script>
+
+</head>
+<html>
+
+<body class='contrast-fb' ng-app="mainApp"
+	ng-controller="AppCtrl">
+	<div ng-include="app-base-module/views/header.html"></div>
+	<%@include file="views/commons/header.jsp"%>
+	<div id='wrapper'>
+		<span ng-show="isUserLoggedIn">
+			<div id='main-nav-bg'></div>
+			<div ng-include="app-base-module/views/menu.jsp"/>
+		</span>
+		<section id='content'>
+			<div class='container'>
+				<div class='row' id='content-wrapper'>
+					<div class='col-xs-12'>
+						<!-- Include the main content -->
+						<div ng-view></div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
+</body>
+
+</html>
